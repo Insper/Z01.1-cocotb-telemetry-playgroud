@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Nor8Way.vhd" "b7d65f99833b505d2ab3d429e145aaaf2e89e99f" "20230817094814.115":
+  entity nor8way at 1( 0) + 0 on 11;
+  architecture arch of nor8way at 17( 292) + 0 on 12;
