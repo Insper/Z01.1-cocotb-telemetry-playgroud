@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Mux4Way.vhd" "fada7b66c0c5608c1a23d1380f5d450aa9ad0190" "20230817094808.692":
+  entity mux4way at 1( 0) + 0 on 11;
+  architecture arch of mux4way at 14( 242) + 0 on 12;
