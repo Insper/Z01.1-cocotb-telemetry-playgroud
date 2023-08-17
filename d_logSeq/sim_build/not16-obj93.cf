@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Not16.vhd" "ce35e1b0a986d47c6d9cb1afa2a7dfb79b46004d" "20230817094815.448":
+  entity not16 at 1( 0) + 0 on 11;
+  architecture arch of not16 at 10( 169) + 0 on 12;

@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/impressora.vhd" "cfd1d559c6d17404f379d85b9c76ca8e0626d64a" "20230817094802.341":
+  entity impressora at 1( 0) + 0 on 11;
+  architecture arch of impressora at 10( 148) + 0 on 12;
