@@ -8,7 +8,8 @@ entity circuito is
 end entity;
 
 architecture arch of circuito is
-
+    signal outAnd: STD_LOGIC;
+    signal outNor: STD_LOGIC;
 begin
 
 end architecture;

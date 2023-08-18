@@ -8,8 +8,7 @@ entity impressora is
 end entity;
 
 architecture arch of impressora is
-
+    signal and1, and2, and3, and4, and5: STD_LOGIC;
 begin
-
 
 end architecture;

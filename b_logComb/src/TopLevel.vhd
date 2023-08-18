@@ -21,7 +21,10 @@ entity TopLevel is
 	port(
 		CLOCK_50 : in  std_logic;
 		SW       : in  std_logic_vector(9 downto 0);
-		LEDR     : out std_logic_vector(9 downto 0)
+		LEDR     : out std_logic_vector(9 downto 0);
+		HEX0     : out std_logic_vector(6 downto 0);
+		HEX1     : out std_logic_vector(6 downto 0);
+		HEX2     : out std_logic_vector(6 downto 0)
 	);
 end entity;
 
@@ -30,6 +33,16 @@ end entity;
 ----------------------------
 architecture rtl of TopLevel is
 
+component conceitoa is
+	port(
+		CLOCK_50 : in  std_logic;
+		SW       : in  std_logic_vector(9 downto 0);
+        HEX0     : out std_logic_vector(6 downto 0); -- 7seg0
+        HEX1     : out std_logic_vector(6 downto 0); -- 7seg0
+        HEX2     : out std_logic_vector(6 downto 0); -- 7seg0
+		LEDR     : out std_logic_vector(9 downto 0)
+	);
+end component;
 --------------
 -- signals
 --------------
@@ -38,6 +51,12 @@ architecture rtl of TopLevel is
 -- implementacao
 ---------------
 begin
-          
+	u1: conceitoa port map(
+	CLOCK_50 => CLOCK_50,
+	SW => SW,
+	HEX0 => HEX0,
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	LEDR => LEDR );
 
 end rtl;

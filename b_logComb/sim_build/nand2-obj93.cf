@@ -1,4 +1,4 @@
 v 4
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Nand2.vhd" "a5a20be0924f4b7bc1c3060df9f791c4eb0cbfef" "20230817094812.683":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/nand2.vhd" "6e11c9143dcf2f4c68ed07e15951405f925b1c0e" "20230818174512.995":
   entity nand2 at 1( 0) + 0 on 11;
   architecture rtl of nand2 at 12( 179) + 0 on 12;

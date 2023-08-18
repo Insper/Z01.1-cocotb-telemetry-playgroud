@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1692378979" />
+    <testcase name="tb_dmux8way" classname="logComb_cocotb" file="/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/logComb_cocotb.py" lineno="218" time="0.0003616809844970703" sim_time_ns="1.000001" ratio_time="2764.870266515491">
+      <failure message="Test failed with RANDOM_SEED=1692378979" />
+    </testcase>
+  </testsuite>
+</testsuites>

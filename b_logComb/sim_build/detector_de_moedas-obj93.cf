@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/detector_de_moedas.vhd" "930bf351edd89b9479f44cb943657ba3a6212936" "20230818171633.810":
+  entity detector_de_moedas at 1( 0) + 0 on 11;
+  architecture arch of detector_de_moedas at 11( 198) + 0 on 12;

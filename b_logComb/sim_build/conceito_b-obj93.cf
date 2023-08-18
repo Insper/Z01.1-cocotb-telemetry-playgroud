@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/conceito_b.vhd" "740428abad702e1d38116d897a61ce07a236ef93" "20230818171642.311":
+  entity conceito_b at 4( 87) + 0 on 11;
+  architecture rtl of conceito_b at 26( 697) + 0 on 12;

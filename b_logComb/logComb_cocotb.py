@@ -164,7 +164,7 @@ async def tb_barrelshifter16(dut):
 
 
 @cocotb.test()
-async def tb_dMux2way(dut):
+async def tb_dmux2way(dut):
 
     inA =   [1, 1, 0, 0]
     inSel = [0, 1, 0, 1]
@@ -520,15 +520,17 @@ async def tb_conceito_b(dut):
         dut.SW.value = inSW[i]
 
         await Timer(1, units="ns")
+
+        dut._log.info(f"Expected: {outHEX0[i]}, Obtained: {dut.HEX0.value}")
+        dut._log.info(f"Expected: {outHEX1[i]}, Obtained: {dut.HEX1.value}")
+        dut._log.info(f"Expected: {outHEX2[i]}, Obtained: {dut.HEX2.value}")
+
         condition = (dut.HEX0.value == outHEX0[i] and dut.HEX1.value == outHEX1[i] and dut.HEX2.value == outHEX2[i])
+        
         if not condition:
-            if not (dut.HEX0.value == outHEX0[i]):
-                dut._log.error("Expected value HEX0: " + "{0:07b}".format(outHEX0[i]) + " Obtained value HEX0: " + str(dut.HEX0.value) )
-            if not (dut.HEX1.value == outHEX1[i]):
-                dut._log.error("Expected value HEX1: " + "{0:07b}".format(outHEX1[i]) + " Obtained value HEX1: " + str(dut.HEX1.value) )
-            if not (dut.HEX2.value == outHEX2[i]):
-                dut._log.error("Expected value HEX2: " + "{0:07b}".format(outHEX2[i]) + " Obtained value HEX2: " + str(dut.HEX2.value) )
+            dut._log.error("Error in test {0}!".format(i))
             assert condition, "Error in test {0}!".format(i)
+
         await Timer(1, units="ns")
 
 

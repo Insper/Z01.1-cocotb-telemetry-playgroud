@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/binarioToBcd.vhd" "542f45cecb158fa1fc2b506aead41d22839a6ae8" "20230817124518.317":
+  entity binariotobcd at 4( 80) + 0 on 4;
+  architecture behaviour of binariotobcd at 17( 408) + 0 on 4;

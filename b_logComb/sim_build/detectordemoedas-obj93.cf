@@ -1,4 +1,4 @@
 v 4
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/detectorDeMoedas.vhd" "4816234f8585f0cf957f21332e74d3d05d126589" "20230817094756.607":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/detectordemoedas.vhd" "8fc84b68f6e3e988ea59257efc989d57fff311c8" "20230818174546.712":
   entity detectordemoedas at 1( 0) + 0 on 11;
-  architecture arch of detectordemoedas at 10( 170) + 0 on 12;
+  architecture arch of detectordemoedas at 11( 196) + 0 on 12;

@@ -1,0 +1,4 @@
+v 4
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/circuito.vhd" "14ceb5fcb76630923ff12698e39b4bd1f304bc51" "20230818174548.850":
+  entity circuito at 1( 0) + 0 on 11;
+  architecture arch of circuito at 10( 139) + 0 on 12;

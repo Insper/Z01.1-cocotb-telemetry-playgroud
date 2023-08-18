@@ -1,4 +1,7 @@
 v 4
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/ConceitoA.vhd" "f607f5cbb16399558571cb52cb7fd31e873f8d7f" "20230817094755.081":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/conceitoa.vhd" "2d0023ba6421bb3ce9aaf2f3e0bad2a50a191121" "20230818174557.335":
   entity conceitoa at 4( 87) + 0 on 11;
   architecture rtl of conceitoa at 26( 696) + 0 on 12;
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/sevenseg.vhd" "ed101957c8a78ee87be536c1ae79431dcbf66e89" "20230818174557.335":
+  entity sevenseg at 1( 0) + 0 on 13;
+  architecture arch of sevenseg at 10( 171) + 0 on 14;

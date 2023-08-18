@@ -2,24 +2,24 @@ v 4
 file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/xor3.vhd" "082cf14658ed33561fc2dc1ba3a5a48fb79cbb66" "20230817094820.447":
   entity xor3 at 1( 0) + 0 on 4;
   architecture arch of xor3 at 10( 134) + 0 on 4;
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Or8Way.vhd" "c083bfba09c8454f4d500150f73dfe221e9a90b6" "20230817094817.989":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Or8Way.vhd" "ed3d84135b48d4a34f280989f745f0f2c0e21562" "20230817123542.817":
   entity or8way at 1( 0) + 0 on 4;
   architecture arch of or8way at 17( 290) + 0 on 4;
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/circuito.vhd" "24996ad20564a73bea2dc1dd9df5cfccb00dd5ac" "20230817094753.816":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/circuito.vhd" "14ceb5fcb76630923ff12698e39b4bd1f304bc51" "20230817123518.657":
   entity circuito at 1( 0) + 0 on 4;
   architecture arch of circuito at 10( 139) + 0 on 4;
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/binarioToBcd.vhd" "542f45cecb158fa1fc2b506aead41d22839a6ae8" "20230817094751.383":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/binarioToBcd.vhd" "542f45cecb158fa1fc2b506aead41d22839a6ae8" "20230817123516.205":
   entity binariotobcd at 4( 80) + 0 on 4;
   architecture behaviour of binariotobcd at 17( 408) + 0 on 4;
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/BarrelShifter16.vhd" "4c3c54e174067768fdc539f61f93ebee76632a77" "20230817094750.033":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/BarrelShifter16.vhd" "3c5605e6e1a99156b25934667cddac166902d38e" "20230817123923.518":
   entity barrelshifter16 at 1( 0) + 0 on 4;
-  architecture rtl of barrelshifter16 at 12( 355) + 0 on 4;
+  architecture rtl of barrelshifter16 at 13( 381) + 0 on 4;
 file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/carrinho.vhd" "6229c42c8a2191cc48d7b5e38180211c46acad21" "20230817094752.594":
   entity carrinho at 1( 0) + 0 on 4;
   architecture arch of carrinho at 10( 167) + 0 on 4;
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Or16.vhd" "5d403364c2512cfe62b98647fc735d9a8a0cd88c" "20230817094816.760":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/Or16.vhd" "48143edec8bff09150c9b3f198e2226e6dc80a56" "20230817123541.645":
   entity or16 at 1( 0) + 0 on 4;
   architecture arch of or16 at 11( 211) + 0 on 4;
-file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/sevenSeg.vhd" "a18877d310fa0ae4fb52909d430a83bbc7ba4d0e" "20230817094819.225":
+file / "/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/src/sevenSeg.vhd" "83d6e9bf42ad1d116a5730ca2ddb9ee08d97d7fd" "20230817123544.050":
   entity sevenseg at 1( 0) + 0 on 4;
   architecture arch of sevenseg at 10( 171) + 0 on 4;

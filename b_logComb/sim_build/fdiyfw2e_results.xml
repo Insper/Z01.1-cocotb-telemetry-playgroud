@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1692296943" />
+    <testcase name="tb_or8way" classname="logComb_cocotb" file="/home/borg/Documents/Z01.1-cocotb-telemetry-playgroud/b_logComb/logComb_cocotb.py" lineno="81" time="0.0014331340789794922" sim_time_ns="20.000001" ratio_time="13955.429079072368" />
+  </testsuite>
+</testsuites>

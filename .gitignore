@@ -1,0 +1,4 @@
+b_logComb/src/*.vhd
+__pycache__
+.pytest_cache
+b_logComb/sim_build/*
