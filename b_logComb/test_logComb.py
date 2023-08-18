@@ -91,6 +91,7 @@ def test_impressora():
 def test_sevenseg():
     run(vhdl_sources=[source("sevenseg.vhd")], toplevel="sevenseg", module="logComb_cocotb" , testcase='tb_sevenseg', toplevel_lang="vhdl")      
     
+<<<<<<< HEAD
 @pytest.mark.telemetry_files(source('conceitob.vhd'),source('sevenseg.vhd'))
 def test_conceito_b():
     run(vhdl_sources=[source("conceitob.vhd"),source('sevenseg.vhd')], toplevel="conceitob", module="logComb_cocotb" , testcase='tb_conceito_b', toplevel_lang="vhdl")         
@@ -98,6 +99,15 @@ def test_conceito_b():
 @pytest.mark.telemetry_files(source('conceitoa.vhd'),source('sevenseg.vhd'))
 def test_conceito_a():
     run(vhdl_sources=[source("conceitoa.vhd"),source('sevenseg.vhd')], toplevel="conceitoa", module="logComb_cocotb" , testcase='tb_conceito_a', toplevel_lang="vhdl")      
+=======
+@pytest.mark.telemetry_files(source('conceito_b.vhd'),source('sevenseg.vhd'))
+def test_conceito_b():
+    run(vhdl_sources=[source("conceito_b.vhd"),source('sevenseg.vhd')], toplevel="conceito_b", module="logComb_cocotb" , testcase='tb_conceito_b', toplevel_lang="vhdl")         
+    
+@pytest.mark.telemetry_files(source('conceito_a.vhd'),source('sevenseg.vhd'))
+def test_conceito_a():
+    run(vhdl_sources=[source("conceito_a.vhd"),source('sevenseg.vhd')], toplevel="conceito_a", module="logComb_cocotb" , testcase='tb_conceito_a', toplevel_lang="vhdl")      
+>>>>>>> 3b673284ebcfa58f78c4564aff33ea7380d96ced
 
 
 if __name__ == "__main__":
