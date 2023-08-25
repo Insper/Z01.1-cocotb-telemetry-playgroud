@@ -11,38 +11,15 @@ def source(name):
 	src_dir = os.path.join(dir, 'src' )
 	return os.path.join(src_dir, name)
 
-@pytest.mark.telemetry_files(source('Add16.vhd'))
-def test_Add16():
-    run(vhdl_sources=[source("Add16.vhd")], toplevel="Add16", module="ula_cocotb" , testcase='tb_Add16', toplevel_lang="vhdl")
 
-
-@pytest.mark.telemetry_files(source('HalfAdder.vhd'))
-def test_HalfAdder():
-    run(vhdl_sources=[source("HalfAdder.vhd")], toplevel="HalfAdder", module="ula_cocotb" , testcase='tb_HalfAdder', toplevel_lang="vhdl")
-
-
-
-@pytest.mark.telemetry_files(source('FullAdder.vhd'))
-def test_FullAdder():
-    run(vhdl_sources=[source("FullAdder.vhd")], toplevel="FullAdder", module="ula_cocotb" , testcase='tb_FullAdder', toplevel_lang="vhdl")
-
-
-@pytest.mark.telemetry_files(source('Inc16.vhd'))
-def test_Inc16():
-    run(vhdl_sources=[source("Inc16.vhd")], toplevel="Inc16", module="ula_cocotb" , testcase='tb_Inc16', toplevel_lang="vhdl")
-
+@pytest.mark.telemetry_files(source('zerador16.vhd'))
+def test_zerador16():
+    run(vhdl_sources=[source("zerador16.vhd")], toplevel="zerador16", module="ula_cocotb" , testcase='tb_zerador16', toplevel_lang="vhdl")
 
 
 @pytest.mark.telemetry_files(source('inversor16.vhd'))
 def test_inversor16():
     run(vhdl_sources=[source("inversor16.vhd")], toplevel="inversor16", module="ula_cocotb" , testcase='tb_inversor16', toplevel_lang="vhdl")
-
-
-
-
-@pytest.mark.telemetry_files(source('zerador16.vhd'))
-def test_zerador16():
-    run(vhdl_sources=[source("zerador16.vhd")], toplevel="zerador16", module="ula_cocotb" , testcase='tb_zerador16', toplevel_lang="vhdl")
 
 
 @pytest.mark.telemetry_files(source('comparador16.vhd'))
@@ -51,15 +28,47 @@ def test_comparador16():
 
 
 
-
-@pytest.mark.telemetry_files(source('ALU.vhd'))
-def test_ALU():
-    run(vhdl_sources=[source("ALU.vhd")], toplevel="ALU", module="ula_cocotb" , testcase='tb_ALU', toplevel_lang="vhdl")
-
+@pytest.mark.telemetry_files(source('fulladder.vhd'))
+def test_fulladder():
+    run(vhdl_sources=[source("fulladder.vhd")], toplevel="fulladder", module="ula_cocotb" , testcase='tb_fulladder', toplevel_lang="vhdl")
 
 
+@pytest.mark.telemetry_files(source('halfadder.vhd'))
+def test_halfadder():
+    run(vhdl_sources=[source("halfadder.vhd")], toplevel="halfadder", module="ula_cocotb" , testcase='tb_halfadder', toplevel_lang="vhdl")
+
+
+@pytest.mark.telemetry_files(source('add16.vhd'), source('fulladder.vhd'))
+def test_add16():
+    run(vhdl_sources=[source("add16.vhd"), source("fulladder.vhd")], toplevel="add16", module="ula_cocotb" , testcase='tb_add16', toplevel_lang="vhdl")
+
+
+@pytest.mark.telemetry_files(source('inc16.vhd'), source('add16.vhd'), source('fulladder.vhd'))
+def test_inc16():
+    run(vhdl_sources=[source("inc16.vhd"), source('add16.vhd'), source('fulladder.vhd')], toplevel="inc16", module="ula_cocotb" , testcase='tb_inc16', toplevel_lang="vhdl")
+
+
+@pytest.mark.telemetry_files(source('and16.vhd'))
+def test_and16():
+    run(vhdl_sources=[source("and16.vhd")], toplevel="and16", module="ula_cocotb" , testcase='tb_and16', toplevel_lang="vhdl")
+
+
+@pytest.mark.telemetry_files(source('mux16.vhd'))
+def test_mux16():
+    run(vhdl_sources=[source("mux16.vhd")], toplevel="mux16", module="ula_cocotb" , testcase='tb_mux16', toplevel_lang="vhdl")
+
+
+@pytest.mark.telemetry_files(source("alu.vhd"),source("zerador16.vhd"), source("inversor16.vhd"), source("add16.vhd"), source("fulladder.vhd"), source("and16.vhd"), source("comparador16.vhd"), source("mux16.vhd"))
+def test_alu():
+    run(vhdl_sources=[source("alu.vhd"),source("zerador16.vhd"), source("inversor16.vhd"), source("add16.vhd"), source("fulladder.vhd"), source("and16.vhd"), source("comparador16.vhd"), source("mux16.vhd")], toplevel="alu", module="ula_cocotb" , testcase='tb_alu', toplevel_lang="vhdl")
 
   
 if __name__ == "__main__":
-    test_ALU()
-
+    test_zerador16()
+    test_inversor16()
+    test_comparador16()
+    test_fulladder()
+    test_halfadder()
+    test_add16()
+    test_inc16()
+    test_alu()

@@ -5,7 +5,7 @@ from cocotb.triggers import Timer
 
 
 @cocotb.test()
-async def tb_Add16(dut):
+async def tb_add16(dut):
 
     inA = [0b0000000000000000, 0b0000000000000000, 0b1111111111111111, 0b1010101010101010, 0b0011110011000011, 0b0001001000110100, 0b0000000000000001]
     inB = [0b0000000000000001, 0b1111111111111111, 0b1111111111111111, 0b0101010101010101, 0b0000111111110000, 0b1001100001110110, 0b1111111111111111]
@@ -24,7 +24,7 @@ async def tb_Add16(dut):
 
 
 @cocotb.test()
-async def tb_HalfAdder(dut):
+async def tb_halfadder(dut):
 
     inA =     [0, 0, 1, 1]
     inB =     [0, 1, 0, 1]
@@ -47,7 +47,7 @@ async def tb_HalfAdder(dut):
 
 
 @cocotb.test()
-async def tb_FullAdder(dut):
+async def tb_fulladder(dut):
 
     inA =     [0, 0, 1, 1, 0, 0, 1, 1]
     inB =     [0, 1, 0, 1, 0, 1, 0, 1]
@@ -71,7 +71,7 @@ async def tb_FullAdder(dut):
         await Timer(1, units="ns")
 
 @cocotb.test()
-async def tb_Inc16(dut):
+async def tb_inc16(dut):
 
     inA = [0b0000000000000000, 0b1111111111111111, 0b0000000000000101, 0b1111111111111011]
     outq =[0b0000000000000001, 0b0000000000000000, 0b0000000000000110, 0b1111111111111100]
@@ -147,7 +147,7 @@ async def tb_comparador16(dut):
 
 
 @cocotb.test()
-async def tb_ALU(dut):
+async def tb_alu(dut):
 
     inX =     [0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000]
     inY =     [0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF]
@@ -184,3 +184,41 @@ async def tb_ALU(dut):
             assert condition, "Error in test {0}!".format(i)
         await Timer(1, units="ns")
 
+@cocotb.test()
+async def tb_and16(dut):
+
+    inA = [0b1111000011110000, 0b1010101010101010, 0b0101010101010101, 0b0000000000000000, 0b0000000000000000, 0b1111111111111111, 0b0101010101010101, 0b1010101010101010]
+    inB = [0b0000111100001111, 0b0000000000000000, 0b0000000000000000, 0b1010101010101010, 0b0101010101010101, 0b1111111111111111, 0b0101010101010101, 0b1010101010101010]
+    outq =[0b0000000000000000, 0b0000000000000000, 0b0000000000000000, 0b0000000000000000, 0b0000000000000000, 0b1111111111111111, 0b0101010101010101, 0b1010101010101010]
+    
+    for i in range(len(inA)):
+        dut.a.value = inA[i]
+        dut.b.value = inB[i]
+
+        await Timer(1, units="ns")
+        condition = (dut.q.value == outq[i])
+        if not condition:
+            dut._log.error("Expected value: " + "{0:016b}".format(outq[i]) + " Obtained value: " + str(dut.q.value) )
+            assert condition, "Error in test {0}!".format(i)
+        await Timer(1, units="ns")
+
+@cocotb.test()
+async def tb_mux16(dut):
+
+    inA =   [0b1111000011110000, 0b0000000000000000, 0b1111000011110000, 0b0000000000000000]
+    inB =   [0b0000000000000000, 0b1111000011110000, 0b0000000000000000, 0b1111000011110000]
+    inSel = [0, 1, 1, 0]
+    outq =  [0b1111000011110000, 0b1111000011110000, 0b0000000000000000, 0b0000000000000000]
+
+
+    for i in range(len(inA)):
+        dut.a.value = inA[i]
+        dut.b.value = inB[i]
+        dut.sel.value = inSel[i]
+
+        await Timer(1, units="ns")
+        condition = (dut.q.value == outq[i])
+        if not condition:
+            dut._log.error("Expected value: " + "{0:016b}".format(outq[i]) + " Obtained value: " + str(dut.q.value) )
+            assert condition, "Error in test {0}!".format(i)
+        await Timer(1, units="ns")
