@@ -58,9 +58,9 @@ def test_mux16():
     run(vhdl_sources=[source("mux16.vhd")], toplevel="mux16", module="ula_cocotb" , testcase='tb_mux16', toplevel_lang="vhdl")
 
 
-@pytest.mark.telemetry_files(source("alu.vhd"),source("zerador16.vhd"), source("inversor16.vhd"), source("add16.vhd"), source("fulladder.vhd"), source("and16.vhd"), source("comparador16.vhd"), source("mux16.vhd"))
+@pytest.mark.telemetry_files(source("alu.vhd"),source("zerador16.vhd"), source("inversor16.vhd"), source("add16.vhd"), source("fulladder.vhd"), source("../../b_logComb/src/and16.vhd"), source("comparador16.vhd"), source("../../b_logComb/src/mux16.vhd"))
 def test_alu():
-    run(vhdl_sources=[source("alu.vhd"),source("zerador16.vhd"), source("inversor16.vhd"), source("add16.vhd"), source("fulladder.vhd"), source("and16.vhd"), source("comparador16.vhd"), source("mux16.vhd")], toplevel="alu", module="ula_cocotb" , testcase='tb_alu', toplevel_lang="vhdl")
+    run(vhdl_sources=[source("alu.vhd"),source("zerador16.vhd"), source("inversor16.vhd"), source("add16.vhd"), source("fulladder.vhd"), source("../../b_logComb/src/and16.vhd"), source("comparador16.vhd"), source("../../b_logComb/src/mux16.vhd")], toplevel="alu", module="ula_cocotb" , testcase='tb_alu', toplevel_lang="vhdl")
 
   
 if __name__ == "__main__":

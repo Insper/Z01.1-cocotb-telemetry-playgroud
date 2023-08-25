@@ -11,86 +11,37 @@ def source(name):
 	src_dir = os.path.join(dir, 'src' )
 	return os.path.join(src_dir, name)
 
-@pytest.mark.telemetry_files(source('BinaryDigit.vhd'))
-def test_BinaryDigit():
-    run(vhdl_sources=[source("BinaryDigit.vhd")], toplevel="BinaryDigit", module="logSeq_cocotb" , testcase='tb_BinaryDigit', toplevel_lang="vhdl")
 
+@pytest.mark.telemetry_files(source('conceito_a/flipflopjk.vhd'))
+def test_flipflopjk():
+    run(vhdl_sources=[source("conceito_a/flipflopjk.vhd")], toplevel="flipflopjk", module="logseq_cocotb" , testcase='tb_flipflopjk', toplevel_lang="vhdl")
 
-@pytest.mark.telemetry_files(source('FlipFlopD.vhd'))
-def test_FlipFlopD():
-    run(vhdl_sources=[source("FlipFlopD.vhd")], toplevel="FlipFlopD", module="logSeq_cocotb" , testcase='tb_FlipFlopD', toplevel_lang="vhdl")
+@pytest.mark.telemetry_files(source('conceito_a/flipflopt.vhd'))
+def test_flipflopt():
+    run(vhdl_sources=[source("conceito_a/flipflopt.vhd")], toplevel="flipflopt", module="logseq_cocotb" , testcase='tb_flipflopt', toplevel_lang="vhdl")
 
-
-
-@pytest.mark.telemetry_files(source('PC.vhd'))
-def test_PC():
-    run(vhdl_sources=[source("PC.vhd")], toplevel="PC", module="logSeq_cocotb" , testcase='tb_PC', toplevel_lang="vhdl")
-
-
-
-@pytest.mark.telemetry_files(source('Register8.vhd'))
-def test_Register8():
-    run(vhdl_sources=[source("Register8.vhd")], toplevel="Register8", module="logSeq_cocotb" , testcase='tb_Register8', toplevel_lang="vhdl")
+@pytest.mark.telemetry_files(source('conceito_a/counterdown.vhd'),source('conceito_a/flipflopt.vhd'))
+def test_counterdown():
+    run(vhdl_sources=[source('conceito_a/counterdown.vhd'),source("conceito_a/flipflopt.vhd")], toplevel="counterdown", module="logseq_cocotb" , testcase='tb_counterdown', toplevel_lang="vhdl")
 
 
 
-@pytest.mark.telemetry_files(source('Register16.vhd'))
-def test_Register16():
-    run(vhdl_sources=[source("Register16.vhd")], toplevel="Register16", module="logSeq_cocotb" , testcase='tb_Register16', toplevel_lang="vhdl")
+@pytest.mark.telemetry_files(source('flipflopd.vhd'))
+def test_flipflopd():
+    run(vhdl_sources=[source("flipflopd.vhd")], toplevel="flipflopd", module="logseq_cocotb" , testcase='tb_flipflopd', toplevel_lang="vhdl")
+
+
+@pytest.mark.telemetry_files(source('binarydigit.vhd'),source('flipflopd.vhd'),source('mux2way.vhd'))
+def test_binarydigit():
+    run(vhdl_sources=[source("binarydigit.vhd"),source('flipflopd.vhd'),source('../../b_logComb/src/mux2way.vhd')], toplevel="binarydigit", module="logseq_cocotb" , testcase='tb_binarydigit', toplevel_lang="vhdl")
+
+
+@pytest.mark.telemetry_files(source('register8.vhd'),source('binarydigit.vhd'),source('flipflopd.vhd'),source('../../b_logComb/src/mux2way.vhd'))
+def test_register8():
+    run(vhdl_sources=[source('register8.vhd'),source("binarydigit.vhd"),source('flipflopd.vhd'),source('../../b_logComb/src/mux2way.vhd')], toplevel="register8", module="logseq_cocotb" , testcase='tb_register8', toplevel_lang="vhdl")
 
 
 
-@pytest.mark.telemetry_files(source('Register32.vhd'))
-def test_Register32():
-    run(vhdl_sources=[source("Register32.vhd")], toplevel="Register32", module="logSeq_cocotb" , testcase='tb_Register32', toplevel_lang="vhdl")
-
-
-
-
-@pytest.mark.telemetry_files(source('Register64.vhd'))
-def test_Register64():
-    run(vhdl_sources=[source("Register64.vhd")], toplevel="Register64", module="logSeq_cocotb" , testcase='tb_Register64', toplevel_lang="vhdl")
-
-
-
-@pytest.mark.telemetry_files(source('Ram8.vhd'))
-def test_Ram8():
-    run(vhdl_sources=[source("Ram8.vhd")], toplevel="Ram8", module="logSeq_cocotb" , testcase='tb_Ram8', toplevel_lang="vhdl")
-
-
-@pytest.mark.telemetry_files(source('Ram64.vhd'))
-def test_Ram64():
-    run(vhdl_sources=[source("Ram64.vhd")], toplevel="Ram64", module="logSeq_cocotb" , testcase='tb_Ram64', toplevel_lang="vhdl")
-
-
-
-@pytest.mark.telemetry_files(source('Ram512.vhd'))
-def test_Ram512():
-    run(vhdl_sources=[source("Ram512.vhd")], toplevel="Ram512", module="logSeq_cocotb" , testcase='tb_Ram512', toplevel_lang="vhdl")
-
-
-
-@pytest.mark.telemetry_files(source('Ram4K.vhd'))
-def test_Ram4K():
-    run(vhdl_sources=[source("Ram4K.vhd")], toplevel="Ram4K", module="logSeq_cocotb" , testcase='tb_Ram4K', toplevel_lang="vhdl")
-
-
-@pytest.mark.telemetry_files(source('CounterDown.vhd'))
-def test_CounterDown():
-    run(vhdl_sources=[source("CounterDown.vhd")], toplevel="CounterDown", module="logSeq_cocotb" , testcase='tb_CounterDown', toplevel_lang="vhdl")
-
-
-@pytest.mark.telemetry_files(source('FlipFlopT.vhd'))
-def test_FlipFlopT():
-    run(vhdl_sources=[source("FlipFlopT.vhd")], toplevel="FlipFlopT", module="logSeq_cocotb" , testcase='tb_FlipFlopT', toplevel_lang="vhdl")
-
-
-@pytest.mark.telemetry_files(source('FlipFlopJK.vhd'))
-def test_FlipFlopJK():
-    run(vhdl_sources=[source("FlipFlopJK.vhd")], toplevel="FlipFlopJK", module="logSeq_cocotb" , testcase='tb_FlipFlopJK', toplevel_lang="vhdl")
-
-
-  
 if __name__ == "__main__":
-    test_FlipFlopJK()
+    test_flipflopd()
 
