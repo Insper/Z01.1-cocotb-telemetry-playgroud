@@ -54,7 +54,7 @@ async def tb_flipflopd(dut):
 
 
 @cocotb.test()
-async def tb_PC(dut):
+async def tb_pc(dut):
 
     inincrement = [1, 1, 0, 0, 0, 1]
     inload      = [0, 0, 0, 0, 1, 0]
@@ -104,7 +104,7 @@ async def tb_register8(dut):
 
 
 @cocotb.test()
-async def tb_Register16(dut):
+async def tb_register16(dut):
 
     ininput =   [0x0F0F, 0x5555, 0x5555, 0xAAAA]
     inload  =   [1, 0, 1, 0]
@@ -127,7 +127,7 @@ async def tb_Register16(dut):
 
 
 @cocotb.test()
-async def tb_Register32(dut):
+async def tb_register32(dut):
 
     ininput =   [0x0F0F0F0F, 0x55555555, 0x55555555, 0xAAAAAAAA]
     inload  =   [1, 0, 1, 0]
@@ -150,7 +150,7 @@ async def tb_Register32(dut):
 
 
 @cocotb.test()
-async def tb_Register64(dut):
+async def tb_register64(dut):
 
     ininput =   [0x0F0F0F0F0F0F0F0F, 0x5555555555555555, 0x5555555555555555, 0xAAAAAAAAAAAAAAAA]
     inload  =   [1, 0, 1, 0]
@@ -173,7 +173,7 @@ async def tb_Register64(dut):
 
 
 @cocotb.test()
-async def tb_Ram8(dut):
+async def tb_ram8(dut):
 
     ininput =   [0x5555, 0xAAAA, 0xAAAA, 0xFFFF, 0xFFFF, 0xF0F0]
     inload  =   [     1,      0,      1,      0,      1,      0]
@@ -198,7 +198,7 @@ async def tb_Ram8(dut):
 
 
 @cocotb.test()
-async def tb_Ram64(dut):
+async def tb_ram64(dut):
 
     ininput =   [0x0000, 0xAAAA, 0xAAAA, 0xFFFF, 0xFFFF, 0xFFFF, 0xF0F0]
     inload  =   [     1,      0,      1,      0,      0,      1,      0]
@@ -223,7 +223,7 @@ async def tb_Ram64(dut):
 
 
 @cocotb.test()
-async def tb_Ram512(dut):
+async def tb_ram512(dut):
 
     ininput =   [0x0000, 0xAAAA, 0xAAAA, 0xFFFF, 0xFFFF, 0xFFFF, 0xF0F0]
     inload  =   [     1,      0,      1,      0,      0,      1,      0]
@@ -248,7 +248,7 @@ async def tb_Ram512(dut):
 
 
 @cocotb.test()
-async def tb_Ram4K(dut):
+async def tb_ram4k(dut):
 
     ininput =   [0x0000, 0xAAAA, 0xAAAA, 0xFFFF, 0xFFFF, 0xFFFF, 0xF0F0]
     inload  =   [     1,      0,      1,      0,      0,      1,      0]
