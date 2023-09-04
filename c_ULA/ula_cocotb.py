@@ -161,6 +161,7 @@ async def tb_alu(dut):
     outng= [0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1]
     outzr= [1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0]
     
+    
 
     for i in range(len(inX)):
         dut.x.value = inX[i]
